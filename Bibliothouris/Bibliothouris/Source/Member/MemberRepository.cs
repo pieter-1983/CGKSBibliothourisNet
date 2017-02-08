@@ -6,21 +6,21 @@ namespace Bibliothouris.Source.User
     public class MemberRepository
     {
 
-        private List<User> users;
+        private List<Member> members;
 
         public MemberRepository()
         {
-            users = new List<User>();
+            members = new List<Member>();
         }
 
-        public virtual List<User> GetAllUsers()
+        public virtual List<Member> GetAllMembers()
         {
-            return users;
+            return members;
         }
 
-        public virtual void AddUser(User user)
+        public virtual void AddMember(Member member)
         {
-            users.Add(user);
+            members.Add(member);
         }
     }
 }

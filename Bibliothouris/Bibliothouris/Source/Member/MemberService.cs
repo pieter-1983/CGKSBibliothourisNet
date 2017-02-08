@@ -3,35 +3,37 @@ using System.Collections.Generic;
 
 namespace Bibliothouris.Source.User
 {
-    public interface IUserService
+    public interface IMemberService
     {
-        List<User> GetAllUsers();
-        void AddUser(String userName);
+        List<Member> GetAllMembers();
+        void AddMember(string firstName, string street, string number, string postalCode,
+            string city, string INSS, string lastName);
     }
 
-    public class UserService: IUserService
+    public class MemberService : IMemberService
     {
         private static int counter;
-        private UserRepository repository;
+        private MemberRepository repository;
 
-        public UserService() : this(new UserRepository())
+        public MemberService() : this(new MemberRepository())
         {
-            
+
         }
 
-        public UserService(UserRepository repository)
+        public MemberService(MemberRepository repository)
         {
             this.repository = repository;
         }
 
-        public List<User> GetAllUsers()
+        public List<Member> GetAllMembers()
         {
-            return repository.GetAllUsers();
+            return repository.GetAllMembers();
         }
 
-        public void AddUser(string userName)
+        public void AddMember(string firstName, string street, string number, string postalCode,
+            string city, string INSS, string lastName)
         {
-            repository.AddUser(new User(++counter, userName));
+            repository.AddMember(new Member(++counter, firstName, lastName, INSS, street, number, city, postalCode));
         }
     }
 }
