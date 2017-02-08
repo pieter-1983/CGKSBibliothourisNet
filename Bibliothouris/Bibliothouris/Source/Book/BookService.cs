@@ -6,7 +6,40 @@ using System.Threading.Tasks;
 
 namespace Bibliothouris.Source.Book
 {
-    class BookService
+    public interface IBookService
     {
+        List<Book> GetAllBooks();
+        void AddBook(string title, string isbn, string authorFirstName, string authorSecondName);
+    }
+
+
+    public class BookService : IBookService
+    {
+        private static int bookCounter;
+        private BookRepository bookRepository;
+
+        public BookService() : this(new BookRepository())
+        {
+
+        }
+
+        public BookService(BookRepository bookRepository)
+        {
+            this.bookRepository = bookRepository;
+        }
+
+        public List<Book> GetAllBooks()
+        {
+            return bookRepository.GetAllBooks();
+        }
+
+        public void AddBook(string title, string isbn, string authorFirstName, string authorSecondName)
+        {
+            bookRepository.AddBook(new Book(++bookCounter, title, isbn, authorFirstName, authorSecondName));
+        }
+
     }
 }
+
+
+
