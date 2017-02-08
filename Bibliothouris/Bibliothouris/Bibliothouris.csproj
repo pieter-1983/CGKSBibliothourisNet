@@ -70,26 +70,12 @@
     <Compile Include="Forms\UsersForm.Designer.cs">
       <DependentUpon>UsersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Source\Book\Book.cs" />
-    <Compile Include="Source\Book\BookController.cs" />
-    <Compile Include="Source\Book\BookRepository.cs" />
-    <Compile Include="Source\Book\BookService.cs" />
-    <Compile Include="Source\Member\Member.cs" />
-    <Compile Include="Source\Member\MemberController.cs" />
-    <Compile Include="Source\Member\MemberRepository.cs" />
-    <Compile Include="Source\Member\MemberService.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\User\User.cs" />
     <Compile Include="Source\User\UserController.cs" />
     <Compile Include="Source\User\UserRepository.cs" />
     <Compile Include="Source\User\UserService.cs" />
-    <EmbeddedResource Include="Forms\BookAddForm.resx">
-      <DependentUpon>BookAddForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\BookForm.resx">
-      <DependentUpon>BookForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\UserAddForm.resx">
       <DependentUpon>UserAddForm.cs</DependentUpon>
     </EmbeddedResource>
