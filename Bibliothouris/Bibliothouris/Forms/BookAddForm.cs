@@ -7,19 +7,43 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bibliothouris.Source.Book;
 
 namespace Bibliothouris.Forms
 {
-    public partial class BookAddForm : Form
+    public interface IBookAddView
     {
+        void SetController(BookController bookController);
+        void Close();
+        void Clear();
+        DialogResult ShowDialog();
+    }
+
+    public partial class BookAddForm : Form, IBookAddView
+    {
+        private BookController bookController;
         public BookAddForm()
         {
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
+        private void addBook_Click(object sender, EventArgs e)
         {
+           bookController.AddBook(Title.Text,ISBN.Text,AuthorFirstName.Text,AuthorLastName.Text);
+        }
 
+
+        public void SetController(BookController bookcontroller)
+        {
+            this.bookController = bookcontroller;
+        }
+
+        public void Clear()
+        {
+            ISBN.Text = "";
+            Title.Text = "";
+            AuthorFirstName.Text = "";
+            AuthorLastName.Text = "";
         }
     }
 }
