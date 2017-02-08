@@ -53,10 +53,6 @@ Make sure you can save your repositories to a file. Make this file human readabl
 ## Story 18:
 As an admin I want to make sure that non registered users can't access the application.
 You should also update the member information with passwords and user role.
-Update the REST requests
-<details><summary>Hint:</summary>
-Read the [Third step: Securing the REST service with Spring Security:](https://jaxenter.com/rest-api-spring-java-8-112289.html)
-</details>
 
 ## Story 19
 As a librarian I want to have the same book multiple times. This ensures that we can lend the book at the same time to multiple members.
@@ -69,8 +65,6 @@ As a librarian I want to mark a book damaged, this will give the previous loaner
 
 ## Story 21
 As an accountant I want to send an invoice to the registered members.
-1. Create a new spring boot application with a different port (preferable another git repo)
-2. Make sure you can ask the other application for all of his users, and his fines.
 3. Every user should pay a subscription fee of 5 euro.
 4. Using a fake SMTP server send emails to the users. <http://papercut.codeplex.com/>
 
