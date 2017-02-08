@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Forms\MembersAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MembersAddForm.Designer.cs">
+      <DependentUpon>MembersAddForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\MembersForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     <Compile Include="Source\User\UserController.cs" />
     <Compile Include="Source\User\UserRepository.cs" />
     <Compile Include="Source\User\UserService.cs" />
+    <EmbeddedResource Include="Forms\MembersAddForm.resx">
+      <DependentUpon>MembersAddForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MembersForm.resx">
       <DependentUpon>MembersForm.cs</DependentUpon>
     </EmbeddedResource>
