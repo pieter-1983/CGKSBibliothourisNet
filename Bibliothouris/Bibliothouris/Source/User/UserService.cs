@@ -14,9 +14,14 @@ namespace Bibliothouris.Source.User
         private static int counter;
         private UserRepository repository;
 
-        public UserService()
+        public UserService() : this(new UserRepository())
         {
-            repository = new UserRepository();
+            
+        }
+
+        public UserService(UserRepository repository)
+        {
+            this.repository = repository;
         }
 
         public List<User> GetAllUsers()

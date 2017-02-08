@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace Bibliothouris.Source.User
 {
-    internal class UserRepository
+    public class UserRepository
     {
 
         private List<User> users;
@@ -13,12 +13,12 @@ namespace Bibliothouris.Source.User
             users = new List<User>();
         }
 
-        internal List<User> GetAllUsers()
+        public virtual List<User> GetAllUsers()
         {
             return users;
         }
 
-        internal void AddUser(User user)
+        public virtual void AddUser(User user)
         {
             users.Add(user);
         }

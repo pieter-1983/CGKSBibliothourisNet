@@ -8,13 +8,11 @@ using Bibliothouris.Forms;
 namespace Tests
 {
     [TestClass]
-    public class TestUserController
+    public class TestUserControllerTest
     {
         private IUserService userService = Substitute.For<IUserService>();
         private IUserView userView = Substitute.For<IUserView>();
         private IUserAddView userAddView = Substitute.For<IUserAddView>();
-
-        [TestInitialize]
 
         [TestMethod]
         public void LoadAllUsers_ShouldGetAllUsers()
