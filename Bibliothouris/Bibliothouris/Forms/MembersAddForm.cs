@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bibliothouris.Source.Member;
 using Bibliothouris.Source.User;
 
 namespace Bibliothouris.Forms
@@ -45,8 +46,27 @@ namespace Bibliothouris.Forms
 
         private void add_Click(object sender, EventArgs e)
         {
-            memberController.AddMember(firstName.Text, street.Text,number.Text, postalCode.Text,city.Text,INSS.Text,lastName.Text );
+            if (errorProvider1.GetError(this.INSS).Length == 0 && errorProvider1.GetError(this.lastName).Length == 0 &&
+                errorProvider1.GetError(this.city).Length == 0)
+            {
+                try
+                {
+                    memberController.AddMember(firstName.Text, street.Text, number.Text, postalCode.Text, city.Text,
+                        INSS.Text,
+                        lastName.Text);
 
+                }
+                catch (ValidationException exception)
+                {
+                    MessageBox.Show(exception.GetMessage(), "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+                }
+            }
+            else
+            {
+                String str = "";
+
+            }
+            
         }
 
         private void MembersAddForm_Load(object sender, EventArgs e)
