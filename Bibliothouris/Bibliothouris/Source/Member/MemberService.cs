@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Bibliothouris.Source.Member;
 
 namespace Bibliothouris.Source.User
 {
@@ -33,7 +34,16 @@ namespace Bibliothouris.Source.User
         public void AddMember(string firstName, string street, string number, string postalCode,
             string city, string INSS, string lastName)
         {
-            repository.AddMember(new Member(firstName, street, number, postalCode, city, INSS, lastName));
+            
+                repository.AddMember(new Member(firstName, street, number, postalCode, city, INSS, lastName));
+
+            
+                
+            
+          
+           
         }
+
+        
     }
 }

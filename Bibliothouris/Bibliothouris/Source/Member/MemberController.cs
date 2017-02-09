@@ -39,6 +39,11 @@ namespace Bibliothouris.Source.User
             LoadAllMembers();
         }
 
+        public void CheckUniqueINSS(string INSS)
+        {
+            
+        }
+
         private void ClearAllMembers()
         {
             view.ClearAllMembers();

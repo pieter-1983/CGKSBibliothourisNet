@@ -11,13 +11,13 @@ namespace Bibliothouris.Source.User
 
     
 
-        public String INSS { get; }
-        public String lastName { get; }
-        public String firstName { get; }
-        public String street { get; }
-        public String number { get; }
-        public String postalCode { get; }
-        public String city { get; }
+        public string INSS { get; }
+        public string lastName { get; }
+        public string firstName { get; }
+        public string street { get; }
+        public string number { get; }
+        public string postalCode { get; }
+        public string city { get; }
 
         public Member(string firstName, string street, string number, string postalCode, string city, string INSS, string lastName)
         {

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Bibliothouris.Source.Member;
 
 namespace Bibliothouris.Source.User
 {
@@ -20,7 +21,22 @@ namespace Bibliothouris.Source.User
 
         public virtual void AddMember(Member member)
         {
+            CheckUniqueINSS(member.INSS);
             members.Add(member);
+
+        }
+
+        public void CheckUniqueINSS(string INSS)
+        {
+            foreach (Member member in members)
+            {
+                if (INSS.Equals(member.INSS))
+                {
+                    throw new ValidationException("INSS already exists");
+
+                }
+
+            }
         }
     }
 }
