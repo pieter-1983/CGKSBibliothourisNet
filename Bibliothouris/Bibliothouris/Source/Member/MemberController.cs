@@ -35,7 +35,7 @@ namespace Bibliothouris.Source.User
         public void AddMember(string firstName, string street, string number, string postalCode,
             string city, string INSS, string lastName)
         {
-            service.AddMember(firstName, lastName, INSS, street, number, city, postalCode);
+            service.AddMember(firstName, street, number, postalCode, city, INSS,lastName);
             addView.Close();
             ClearAllMembers();
             LoadAllMembers();

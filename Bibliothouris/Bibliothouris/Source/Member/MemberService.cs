@@ -12,7 +12,7 @@ namespace Bibliothouris.Source.User
 
     public class MemberService : IMemberService
     {
-        private static int counter;
+       
         private MemberRepository repository;
 
         public MemberService() : this(new MemberRepository())
@@ -33,7 +33,7 @@ namespace Bibliothouris.Source.User
         public void AddMember(string firstName, string street, string number, string postalCode,
             string city, string INSS, string lastName)
         {
-            repository.AddMember(new Member(++counter, firstName, lastName, INSS, street, number, city, postalCode));
+            repository.AddMember(new Member(firstName, street, number, postalCode, city, INSS, lastName));
         }
     }
 }

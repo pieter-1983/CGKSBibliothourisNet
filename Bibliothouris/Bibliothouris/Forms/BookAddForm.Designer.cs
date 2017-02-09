@@ -129,7 +129,6 @@
             this.Controls.Add(this.label1);
             this.Name = "BookAddForm";
             this.Text = "BookAddForm";
-            this.Load += new System.EventHandler(this.BookAddForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

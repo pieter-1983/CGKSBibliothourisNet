@@ -60,7 +60,6 @@
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "firstName";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -79,7 +78,6 @@
             this.label3.Size = new System.Drawing.Size(33, 13);
             this.label3.TabIndex = 3;
             this.label3.Text = "street";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -107,7 +105,6 @@
             this.label6.Size = new System.Drawing.Size(42, 13);
             this.label6.TabIndex = 6;
             this.label6.Text = "number";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
             // label7
             // 
@@ -138,7 +135,6 @@
             this.number.Name = "number";
             this.number.Size = new System.Drawing.Size(100, 20);
             this.number.TabIndex = 10;
-            this.number.TextChanged += new System.EventHandler(this.number_TextChanged);
             // 
             // postalCode
             // 
@@ -153,7 +149,6 @@
             this.city.Name = "city";
             this.city.Size = new System.Drawing.Size(100, 20);
             this.city.TabIndex = 12;
-            this.city.TextChanged += new System.EventHandler(this.city_TextChanged);
             // 
             // INSS
             // 
@@ -170,6 +165,7 @@
             this.add.TabIndex = 14;
             this.add.Text = "Add";
             this.add.UseVisualStyleBackColor = true;
+            this.add.Click += new System.EventHandler(this.add_Click);
             // 
             // MembersAddForm
             // 

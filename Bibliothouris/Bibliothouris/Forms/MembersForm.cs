@@ -36,6 +36,20 @@ namespace Bibliothouris.Forms
             memberListView.Items.Add(CreateMemberListViewItem(member));
         }
 
+        private ListViewItem CreateMemberListViewItem(Member member)
+        {
+            ListViewItem memberItem = new ListViewItem(member.INSS);
+            memberItem.SubItems.Add(member.firstName);
+            memberItem.SubItems.Add(member.lastName);
+            memberItem.SubItems.Add(member.street);
+            memberItem.SubItems.Add(member.number);
+            memberItem.SubItems.Add(member.postalCode);
+            memberItem.SubItems.Add(member.city);
+
+            return memberItem;
+
+        }
+
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
@@ -43,7 +57,7 @@ namespace Bibliothouris.Forms
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
-
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -65,9 +79,15 @@ namespace Bibliothouris.Forms
             memberListView.Items.Clear();
         }
 
-        private void add_Click(object sender, EventArgs e)
+       
+        private void button1_Click(object sender, EventArgs e)
         {
             memberController.addMemberView();
+        }
+
+        private void btnBooks_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

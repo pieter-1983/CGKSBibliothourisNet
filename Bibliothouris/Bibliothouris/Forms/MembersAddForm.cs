@@ -32,36 +32,6 @@ namespace Bibliothouris.Forms
             this.memberController = memberController;
         }
        
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MembersAddForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void number_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void city_TextChanged(object sender, EventArgs e)
-        {
-
-        }
         public void Clear()
         {
             firstName.Text = "";
@@ -71,6 +41,17 @@ namespace Bibliothouris.Forms
             city.Text = "";
             postalCode.Text = "";
             INSS.Text = "";
+        }
+
+        private void add_Click(object sender, EventArgs e)
+        {
+            memberController.AddMember(firstName.Text, street.Text,number.Text, postalCode.Text,city.Text,INSS.Text,lastName.Text );
+
+        }
+
+        private void MembersAddForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
