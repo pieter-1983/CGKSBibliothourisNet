@@ -50,15 +50,15 @@
             // 
             // firstName
             // 
-            this.firstName.Location = new System.Drawing.Point(69, 6);
+            this.firstName.Location = new System.Drawing.Point(69, 22);
             this.firstName.Name = "firstName";
             this.firstName.Size = new System.Drawing.Size(100, 20);
-            this.firstName.TabIndex = 0;
+            this.firstName.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Location = new System.Drawing.Point(12, 22);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 13);
             this.label1.TabIndex = 1;
@@ -67,7 +67,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 29);
+            this.label2.Location = new System.Drawing.Point(12, 5);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 13);
             this.label2.TabIndex = 2;
@@ -120,45 +120,48 @@
             // 
             // lastName
             // 
-            this.lastName.Location = new System.Drawing.Point(69, 22);
+            this.lastName.Location = new System.Drawing.Point(69, 2);
             this.lastName.Name = "lastName";
             this.lastName.Size = new System.Drawing.Size(100, 20);
-            this.lastName.TabIndex = 8;
+            this.lastName.TabIndex = 0;
+            this.lastName.Validated += new System.EventHandler(this.required_Validated);
             // 
             // street
             // 
             this.street.Location = new System.Drawing.Point(69, 42);
             this.street.Name = "street";
             this.street.Size = new System.Drawing.Size(100, 20);
-            this.street.TabIndex = 9;
+            this.street.TabIndex = 3;
             // 
             // number
             // 
             this.number.Location = new System.Drawing.Point(69, 62);
             this.number.Name = "number";
             this.number.Size = new System.Drawing.Size(100, 20);
-            this.number.TabIndex = 10;
+            this.number.TabIndex = 4;
             // 
             // postalCode
             // 
             this.postalCode.Location = new System.Drawing.Point(69, 84);
             this.postalCode.Name = "postalCode";
             this.postalCode.Size = new System.Drawing.Size(100, 20);
-            this.postalCode.TabIndex = 11;
+            this.postalCode.TabIndex = 5;
             // 
             // city
             // 
             this.city.Location = new System.Drawing.Point(69, 110);
             this.city.Name = "city";
             this.city.Size = new System.Drawing.Size(100, 20);
-            this.city.TabIndex = 12;
+            this.city.TabIndex = 6;
+            this.city.Validated += new System.EventHandler(this.required_Validated);
             // 
             // INSS
             // 
             this.INSS.Location = new System.Drawing.Point(69, 136);
             this.INSS.Name = "INSS";
             this.INSS.Size = new System.Drawing.Size(100, 20);
-            this.INSS.TabIndex = 13;
+            this.INSS.TabIndex = 7;
+            this.INSS.Validated += new System.EventHandler(this.required_Validated);
             // 
             // add
             // 
@@ -172,6 +175,7 @@
             // 
             // errorProvider1
             // 
+            this.errorProvider1.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink;
             this.errorProvider1.ContainerControl = this;
             // 
             // MembersAddForm
@@ -196,7 +200,6 @@
             this.Controls.Add(this.firstName);
             this.Name = "MembersAddForm";
             this.Text = "MembersAddForm";
-            this.Load += new System.EventHandler(this.MembersAddForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

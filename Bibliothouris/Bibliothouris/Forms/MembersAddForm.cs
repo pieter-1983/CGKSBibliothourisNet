@@ -19,6 +19,7 @@ namespace Bibliothouris.Forms
         void Clear();
         DialogResult ShowDialog();
     }
+
     public partial class MembersAddForm : Form, IMemberAddView
     {
         private MemberController memberController;
@@ -32,7 +33,7 @@ namespace Bibliothouris.Forms
         {
             this.memberController = memberController;
         }
-       
+
         public void Clear()
         {
             firstName.Text = "";
@@ -54,7 +55,6 @@ namespace Bibliothouris.Forms
                     memberController.AddMember(firstName.Text, street.Text, number.Text, postalCode.Text, city.Text,
                         INSS.Text,
                         lastName.Text);
-
                 }
                 catch (ValidationException exception)
                 {
@@ -63,15 +63,57 @@ namespace Bibliothouris.Forms
             }
             else
             {
-                String str = "";
-
+                string str = "";
+                if (errorProvider1.GetError(this.INSS).Length > 0)
+                {
+                    str += errorProvider1.GetError(this.INSS) + "\r\n";
+                }
+                if (errorProvider1.GetError(this.lastName).Length > 0)
+                {
+                    str += errorProvider1.GetError(this.lastName) + "\r\n";
+                }
+                if (errorProvider1.GetError(this.city).Length > 0)
+                {
+                    str += errorProvider1.GetError(this.city) + "\r\n";
+                }
+                MessageBox.Show(str, "Error", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
             }
-            
         }
 
-        private void MembersAddForm_Load(object sender, EventArgs e)
+        private void required_Validated(object sender, System.EventArgs e)
         {
-
+            if (INSS.Text.Length > 0)
+            {
+                // Clear the error, if any, in the error provider.
+                errorProvider1.SetError(this.INSS, string.Empty);
+            }
+            else
+            {
+                // Set the error if the name is not valid.
+                errorProvider1.SetError(this.INSS, "INSS is required.");
+            }
+            if (lastName.Text.Length > 0)
+            {
+                // Clear the error, if any, in the error provider.
+                errorProvider1.SetError(this.lastName, string.Empty);
+            }
+            else
+            {
+                // Set the error if the name is not valid.
+                errorProvider1.SetError(this.lastName, "Lastname is required.");
+            }
+            if (city.Text.Length > 0)
+            {
+                // Clear the error, if any, in the error provider.
+                errorProvider1.SetError(this.city, string.Empty);
+            }
+            else
+            {
+                // Set the error if the name is not valid.
+                errorProvider1.SetError(this.city, "City is required.");
+            }
         }
+
+     
     }
 }

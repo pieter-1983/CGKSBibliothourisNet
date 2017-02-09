@@ -25,10 +25,13 @@ namespace Bibliothouris.Forms
         public MembersForm()
         {
             InitializeComponent();
+            
+           
         }
         public void SetController(MemberController memberController)
         {
             this.memberController = memberController;
+            memberController.LoadAllMembers();
         }
 
         public void AddMember(Member member)
@@ -50,27 +53,7 @@ namespace Bibliothouris.Forms
 
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-            
-        }
-
        
-
-        private void listView2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MembersForm_Load(object sender, EventArgs e)
-        {
-
-        }
         public void ClearAllMembers()
         {
             memberListView.Items.Clear();
