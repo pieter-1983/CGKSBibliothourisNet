@@ -96,6 +96,7 @@
     <Compile Include="Source\Member\MemberController.cs" />
     <Compile Include="Source\Member\MemberRepository.cs" />
     <Compile Include="Source\Member\MemberService.cs" />
+    <Compile Include="Source\Member\ValidationException.cs" />
     <Compile Include="Source\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Source\User\User.cs" />

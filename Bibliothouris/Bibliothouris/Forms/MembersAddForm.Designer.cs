@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.firstName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +44,8 @@
             this.city = new System.Windows.Forms.TextBox();
             this.INSS = new System.Windows.Forms.TextBox();
             this.add = new System.Windows.Forms.Button();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // firstName
@@ -167,6 +170,10 @@
             this.add.UseVisualStyleBackColor = true;
             this.add.Click += new System.EventHandler(this.add_Click);
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // MembersAddForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +197,7 @@
             this.Name = "MembersAddForm";
             this.Text = "MembersAddForm";
             this.Load += new System.EventHandler(this.MembersAddForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +220,6 @@
         private System.Windows.Forms.TextBox city;
         private System.Windows.Forms.TextBox INSS;
         private System.Windows.Forms.Button add;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
