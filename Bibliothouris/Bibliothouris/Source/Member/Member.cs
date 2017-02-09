@@ -9,7 +9,7 @@ namespace Bibliothouris.Source.User
     public class Member
     {
 
-        public int ID { get; }
+    
 
         public String INSS { get; }
         public String lastName { get; }
@@ -19,9 +19,8 @@ namespace Bibliothouris.Source.User
         public String postalCode { get; }
         public String city { get; }
 
-        public Member(int ID, string firstName, string street, string number, string postalCode, string city, string INSS, string lastName)
+        public Member(string firstName, string street, string number, string postalCode, string city, string INSS, string lastName)
         {
-            this.ID = ID;
             this.firstName = firstName;
             this.street = street;
             this.number = number;

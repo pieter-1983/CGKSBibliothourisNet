@@ -43,7 +43,8 @@ namespace Bibliothouris.Forms
             userName.Text = "";
         }
 
-        private void UserAddForm_Load(object sender, EventArgs e) {
+        private void UserAddForm_Load(object sender, EventArgs e)
+        {
 
         }
     }
