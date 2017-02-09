@@ -21,7 +21,6 @@ namespace Bibliothouris.Source.Book
             this.addView = addView;
             this.view.SetController(this);
             this.addView.SetController(this);
-
         }
 
         public void LoadAllBooks()

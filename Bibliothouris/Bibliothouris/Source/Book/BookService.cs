@@ -15,7 +15,6 @@ namespace Bibliothouris.Source.Book
 
     public class BookService : IBookService
     {
-        private static int bookCounter;
         private BookRepository bookRepository;
 
         public BookService() : this(new BookRepository())
@@ -35,7 +34,7 @@ namespace Bibliothouris.Source.Book
 
         public void AddBook(string title, string isbn, string authorFirstName, string authorSecondName)
         {
-            bookRepository.AddBook(new Book(++bookCounter, title, isbn, authorFirstName, authorSecondName));
+            bookRepository.AddBook(new Book(title, isbn, authorFirstName, authorSecondName));
         }
 
     }

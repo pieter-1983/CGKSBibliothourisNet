@@ -74,6 +74,7 @@
             this.Controls.Add(this.userListView);
             this.Name = "UsersForm";
             this.Text = "Users";
+            this.Load += new System.EventHandler(this.UsersForm_Load);
             this.ResumeLayout(false);
 
         }
