@@ -60,10 +60,7 @@ namespace Bibliothouris.Forms
             
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void listView2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -85,9 +82,6 @@ namespace Bibliothouris.Forms
             memberController.addMemberView();
         }
 
-        private void btnBooks_Click(object sender, EventArgs e)
-        {
-
-        }
+        
     }
 }
