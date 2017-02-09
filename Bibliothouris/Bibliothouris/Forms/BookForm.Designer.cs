@@ -94,7 +94,6 @@
             this.Controls.Add(this.bookView);
             this.Name = "BookForm";
             this.Text = "BookForm";
-            this.Load += new System.EventHandler(this.BookForm_Load);
             this.ResumeLayout(false);
 
         }

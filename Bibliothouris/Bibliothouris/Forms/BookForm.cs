@@ -61,9 +61,5 @@ namespace Bibliothouris.Forms
            
         }
 
-        private void BookForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
