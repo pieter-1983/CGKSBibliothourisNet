@@ -27,11 +27,6 @@ namespace Bibliothouris.Forms
             InitializeComponent();
         }
 
-        private void addBook_Click(object sender, EventArgs e)
-        {
-           bookController.AddBook(Title.Text, ISBN.Text, AuthorFirstName.Text, AuthorLastName.Text);
-        }
-
 
         public void SetController(BookController bookcontroller)
         {
@@ -48,6 +43,10 @@ namespace Bibliothouris.Forms
 
         private void BookAddForm_Load(object sender, EventArgs e) {
 
+        }
+
+        private void addBook_Click(object sender, EventArgs e) {
+            bookController.AddBook(Title.Text, ISBN.Text, AuthorFirstName.Text, AuthorLastName.Text);
         }
     }
 }
