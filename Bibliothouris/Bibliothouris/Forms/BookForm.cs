@@ -14,7 +14,7 @@ namespace Bibliothouris.Forms
     public interface IBookView
     {
         void SetController(BookController bookController);
-        void AddBooks(List<Book> books);
+        void AddBook(Book book);
         void ClearAllBooks();
         DialogResult ShowDialog();
     }
@@ -23,19 +23,10 @@ namespace Bibliothouris.Forms
     public partial class BookForm : Form, IBookView
     {
         private BookController bookController;
+
         public BookForm()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         public void SetController(BookController bookController)
@@ -43,22 +34,31 @@ namespace Bibliothouris.Forms
             this.bookController = bookController;
         }
 
-        public void AddBooks(List<Book> books)
+        public void AddBook(Book book) {
+            bookView.Items.Add(CreateBookListViewItem(book));
+        }
+
+        public ListViewItem CreateBookListViewItem(Book book)
         {
-            foreach (var book in books)
-            {
-                ListViewItem bookItem = new ListViewItem(book.ID.ToString());
-                bookItem.SubItems.Add(book.isbn);
+                ListViewItem bookItem = new ListViewItem(book.isbn);
                 bookItem.SubItems.Add(book.title);
                 bookItem.SubItems.Add(book.authorFirstName);
                 bookItem.SubItems.Add(book.authorLastName);
-                bookView.Items.Add(bookItem);
-            }
+
+            return bookItem;
         }
 
         public void ClearAllBooks()
         {
-           
+            bookView.Items.Clear();
+        }
+
+        private void button1_Click(object sender, EventArgs e) {
+            bookController.addBookView();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e) {
+
         }
 
     }

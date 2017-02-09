@@ -31,7 +31,7 @@ namespace Bibliothouris.Source.Book
         {
             return bookRepository.GetAllBooks();
         }
-
+    
         public void AddBook(string title, string isbn, string authorFirstName, string authorSecondName)
         {
             bookRepository.AddBook(new Book(title, isbn, authorFirstName, authorSecondName));

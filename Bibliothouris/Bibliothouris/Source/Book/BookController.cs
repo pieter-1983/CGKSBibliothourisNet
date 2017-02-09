@@ -14,7 +14,7 @@ namespace Bibliothouris.Source.Book
         private IBookAddView addView { get; }
         private IBookService service;
 
-        public BookController(IBookService service, IBookView view, IBookAddView addView)
+        public BookController(IBookView view, IBookAddView addView, IBookService service)
         {
             this.service = service;
             this.view = view;
@@ -25,10 +25,12 @@ namespace Bibliothouris.Source.Book
 
         public void LoadAllBooks()
         {
-            view.AddBooks(service.GetAllBooks());
-            
+            foreach(Book book in service.GetAllBooks()) {
+                view.AddBook(book);
+            }  
         }
-        public void AddBook(string title,string ISBN,string authorFirstName,string authorLastName)
+
+        public void AddBook(string title, string ISBN, string authorFirstName, string authorLastName)
         {
             service.AddBook(title,ISBN,authorFirstName,authorLastName);
             addView.Close();
@@ -40,6 +42,7 @@ namespace Bibliothouris.Source.Book
         {
             view.ClearAllBooks();
         }
+
         public void addBookView()
         {
             addView.Clear();
