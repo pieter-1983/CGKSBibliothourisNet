@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Bibliothouris.Source.TheController;
 
 namespace Bibliothouris.Forms
 {
@@ -16,17 +17,24 @@ namespace Bibliothouris.Forms
     {
         private MemberController memberController;
         private BookController bookController;
+        private TheController theController;
 
         public StartScreen()
         {
-            memberController = new MemberController(new MembersForm(), new MembersAddForm(), new MemberService());
-            bookController = new BookController(new BookForm(), new BookAddForm(), new BookService());
+        
+            
             InitializeComponent();
+        }
+        public void SetControllers(MemberController memberController, BookController bookController)
+        {
+            this.memberController = memberController;
+            this.bookController = bookController;
         }
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
             memberController.view.ShowDialog();
+            
         }
 
 
@@ -34,5 +42,7 @@ namespace Bibliothouris.Forms
         {
             bookController.view.ShowDialog();
         }
+
+        
     }
 }
