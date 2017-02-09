@@ -14,7 +14,7 @@ namespace Bibliothouris.Source.Book
         public string authorFirstName { get; }
         public string authorLastName { get; }
 
-        public Book(int ID, string title, string isbn, string authorFirstName, string authorLastName)
+        public Book(string title, string isbn, string authorFirstName, string authorLastName)
         {
             this.ID = ID;
             this.title = title;

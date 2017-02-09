@@ -29,7 +29,7 @@ namespace Bibliothouris.Forms
 
         private void addBook_Click(object sender, EventArgs e)
         {
-           bookController.AddBook(Title.Text,ISBN.Text,AuthorFirstName.Text,AuthorLastName.Text);
+           bookController.AddBook(Title.Text, ISBN.Text, AuthorFirstName.Text, AuthorLastName.Text);
         }
 
 
@@ -44,6 +44,10 @@ namespace Bibliothouris.Forms
             Title.Text = "";
             AuthorFirstName.Text = "";
             AuthorLastName.Text = "";
+        }
+
+        private void BookAddForm_Load(object sender, EventArgs e) {
+
         }
     }
 }

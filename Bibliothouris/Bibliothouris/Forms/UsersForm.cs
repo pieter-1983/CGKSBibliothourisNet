@@ -16,8 +16,7 @@ namespace Bibliothouris.Forms
         void SetController(UserController userController);
         void AddUser(User user);
         void ClearAllUsers();
-        DialogResult ShowDialog();
-        
+        DialogResult ShowDialog();   
     }
 
     public partial class UsersForm : Form, IUserView
@@ -43,8 +42,7 @@ namespace Bibliothouris.Forms
         {
             ListViewItem userItem = new ListViewItem(user.ID.ToString());
             userItem.SubItems.Add(user.Name);
-            return userItem;
-            
+            return userItem;  
         }
 
         public void ClearAllUsers()
@@ -59,6 +57,10 @@ namespace Bibliothouris.Forms
 
         private void userListView_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void UsersForm_Load(object sender, EventArgs e) {
 
         }
     }
