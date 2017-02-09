@@ -38,6 +38,20 @@ namespace Bibliothouris.Source.Book
             LoadAllBooks();
         }
 
+        public void GetPartialISBN(string partialISBN) {
+            service.GetPartialISBN(partialISBN);
+        }
+        public void GetPartialTitle(string partialTitle) {
+            service.GetPartialTitle(partialTitle);
+        }
+        public void GetPartialFirstName(string partialFirstName) {
+            service.GetPartialFirstName(partialFirstName);
+        }
+        public void GetPartialLastName(string partialLastName) {
+            service.GetPartialLastName(partialLastName);
+        }
+
+
         public void ClearAllBooks()
         {
             view.ClearAllBooks();
