@@ -22,6 +22,8 @@ namespace Bibliothouris.Source.User
             this.addView.SetController(this);
         }
 
+       
+
         public void LoadAllMembers()
         {
             foreach (Member member in service.GetAllMembers())
