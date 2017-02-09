@@ -26,12 +26,12 @@ namespace Bibliothouris.Forms {
         }
     
 
-        private void btnBooks_Click(object sender, EventArgs e) {
+     
 
-            BookController bookController = new BookController(new BookService(), new BookForm(), new BookAddForm());
-    
+        private void btnBooks_Click_1(object sender, EventArgs e) {
+            BookController bookController = new BookController(new BookForm(), new BookAddForm(), new BookService());
+
             bookController.view.ShowDialog();
-
         }
     }
 }

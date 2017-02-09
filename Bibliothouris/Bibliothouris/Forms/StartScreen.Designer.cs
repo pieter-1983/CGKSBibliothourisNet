@@ -45,6 +45,7 @@
             this.btnBooks.TabIndex = 1;
             this.btnBooks.Text = "Books";
             this.btnBooks.UseVisualStyleBackColor = true;
+            this.btnBooks.Click += new System.EventHandler(this.btnBooks_Click_1);
             // 
             // StartScreen
             // 
