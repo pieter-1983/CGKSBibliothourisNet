@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("");
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem("");
             this.listView1 = new System.Windows.Forms.ListView();
             this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.FirstName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -37,12 +37,12 @@
             this.memberListView = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.BtnAddMember = new System.Windows.Forms.Button();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.BtnAddMember = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,13 +54,12 @@
             this.LastName});
             this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
+            listViewItem1});
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
             this.listView1.Size = new System.Drawing.Size(1368, 420);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             // 
             // tableLayoutPanel1
             // 
@@ -79,7 +78,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(1164, 336);
             this.tableLayoutPanel1.TabIndex = 1;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
             // memberListView
             // 
@@ -93,11 +91,10 @@
             this.columnHeader7});
             this.memberListView.Location = new System.Drawing.Point(3, 3);
             this.memberListView.Name = "memberListView";
-            this.memberListView.Size = new System.Drawing.Size(1158, 175);
+            this.memberListView.Size = new System.Drawing.Size(1158, 330);
             this.memberListView.TabIndex = 0;
             this.memberListView.UseCompatibleStateImageBehavior = false;
             this.memberListView.View = System.Windows.Forms.View.Details;
-            this.memberListView.SelectedIndexChanged += new System.EventHandler(this.listView2_SelectedIndexChanged);
             // 
             // columnHeader1
             // 
@@ -106,16 +103,6 @@
             // columnHeader2
             // 
             this.columnHeader2.Text = "firstName";
-            // 
-            // BtnAddMember
-            // 
-            this.BtnAddMember.Location = new System.Drawing.Point(21, 352);
-            this.BtnAddMember.Name = "BtnAddMember";
-            this.BtnAddMember.Size = new System.Drawing.Size(104, 23);
-            this.BtnAddMember.TabIndex = 2;
-            this.BtnAddMember.Text = "add Member";
-            this.BtnAddMember.UseVisualStyleBackColor = true;
-            this.BtnAddMember.Click += new System.EventHandler(this.button1_Click);
             // 
             // columnHeader3
             // 
@@ -138,6 +125,16 @@
             // 
             this.columnHeader7.Text = "City";
             // 
+            // BtnAddMember
+            // 
+            this.BtnAddMember.Location = new System.Drawing.Point(21, 352);
+            this.BtnAddMember.Name = "BtnAddMember";
+            this.BtnAddMember.Size = new System.Drawing.Size(140, 44);
+            this.BtnAddMember.TabIndex = 2;
+            this.BtnAddMember.Text = "Add Member";
+            this.BtnAddMember.UseVisualStyleBackColor = true;
+            this.BtnAddMember.Click += new System.EventHandler(this.button1_Click);
+            // 
             // MembersForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,7 +145,6 @@
             this.Controls.Add(this.listView1);
             this.Name = "MembersForm";
             this.Text = "MembersForm";
-            this.Load += new System.EventHandler(this.MembersForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

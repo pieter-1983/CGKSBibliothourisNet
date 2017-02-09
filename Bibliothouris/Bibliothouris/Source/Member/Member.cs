@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FileHelpers;
 
 namespace Bibliothouris.Source.User
 {
+    [DelimitedRecord(",")]
     public class Member
     {
 
@@ -19,6 +21,10 @@ namespace Bibliothouris.Source.User
         public string postalCode { get; }
         public string city { get; }
 
+        public Member()
+        {
+            
+        }
         public Member(string firstName, string street, string number, string postalCode, string city, string INSS, string lastName)
         {
             this.firstName = firstName;

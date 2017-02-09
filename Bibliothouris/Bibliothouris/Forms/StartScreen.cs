@@ -10,27 +10,28 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Bibliothouris.Forms {
-    public partial class StartScreen : Form {
+namespace Bibliothouris.Forms
+{
+    public partial class StartScreen : Form
+    {
+        private MemberController memberController;
+        private BookController bookController;
 
-        public StartScreen() {
+        public StartScreen()
+        {
+            memberController = new MemberController(new MembersForm(), new MembersAddForm(), new MemberService());
+            bookController = new BookController(new BookForm(), new BookAddForm(), new BookService());
             InitializeComponent();
         }
 
-        private void btnMembers_Click(object sender, EventArgs e) {
-
-            MemberController memberController = new MemberController(new MembersForm(), new MembersAddForm(), new MemberService());
-
+        private void btnMembers_Click(object sender, EventArgs e)
+        {
             memberController.view.ShowDialog();
-
         }
-    
 
-     
 
-        private void btnBooks_Click_1(object sender, EventArgs e) {
-            BookController bookController = new BookController(new BookForm(), new BookAddForm(), new BookService());
-
+        private void btnBooks_Click_1(object sender, EventArgs e)
+        {
             bookController.view.ShowDialog();
         }
     }
