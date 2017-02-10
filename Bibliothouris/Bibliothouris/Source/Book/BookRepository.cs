@@ -67,7 +67,7 @@ namespace Bibliothouris.Source.Book
             Regex regx = new Regex(partialLastName);
             List<Book> listPartialLastName = new List<Book>();
             foreach (Book book in books) {
-                if (regx.IsMatch(book.authorFirstName)) {
+                if (regx.IsMatch(book.authorLastName)) {
                     listPartialLastName.Add(book);
                 }
             }

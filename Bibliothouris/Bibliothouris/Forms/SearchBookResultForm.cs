@@ -48,8 +48,7 @@ namespace Bibliothouris.Forms {
         }
 
         public void GetPartialISBN(Book book) {
-            SearchBookView.Items.Add(CreateBookSearchResultListViewItem(book));
-            
+            SearchBookView.Items.Add(CreateBookSearchResultListViewItem(book));    
         }
 
         public void GetPartialTitle(Book book) {
