@@ -51,8 +51,6 @@ namespace Bibliothouris.Source.Book {
 
 
 
-
-
         public void GetPartialISBN(string partialISBN) {
             service.GetPartialISBN(partialISBN);
             bookSearch.Close();
