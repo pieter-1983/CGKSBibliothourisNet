@@ -39,6 +39,20 @@ namespace Bibliothouris.Source.Book {
             LoadAllBooks();
         }
 
+        public void ClearAllBooks() {
+            view.ClearAllBooks();
+        }
+
+        public void addBookView() {
+            addView.Clear();
+            addView.ShowDialog();
+        }
+
+
+
+
+
+
         public void GetPartialISBN(string partialISBN) {
             service.GetPartialISBN(partialISBN);
             bookSearch.Close();
@@ -67,15 +81,6 @@ namespace Bibliothouris.Source.Book {
             LoadAllSearchedBooksLastName(partialLastName);
         }
 
-
-        public void ClearAllBooks() {
-            view.ClearAllBooks();
-        }
-
-        public void addBookView() {
-            addView.Clear();
-            addView.ShowDialog();
-        }
 
         public void bookSearchView() {
             bookSearch.Clear();
