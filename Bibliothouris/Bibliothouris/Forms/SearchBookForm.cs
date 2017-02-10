@@ -56,6 +56,8 @@ namespace Bibliothouris.Forms {
                 bookcontroller.GetPartialLastName(searchBookBox.Text);
             }
 
+            bookcontroller.bookResults.ShowDialog();
+
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {

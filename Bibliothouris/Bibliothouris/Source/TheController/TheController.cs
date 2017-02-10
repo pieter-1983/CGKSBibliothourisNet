@@ -18,7 +18,7 @@ namespace Bibliothouris.Source.TheController
         public TheController()
         {
             memberController = new MemberController(new MembersForm(), new MembersAddForm(), new MemberService());
-            bookController = new BookController(new BookForm(), new BookAddForm(), new BookService());
+            bookController = new BookController(new BookForm(), new BookAddForm(), new BookService(), new SearchBookForm(), new SearchBookResultForm());
             startScreen=new StartScreen();
             startScreen.SetControllers(memberController, bookController);
             startScreen.ShowDialog();

@@ -62,7 +62,7 @@ namespace Bibliothouris.Forms
         }
 
         private void btnSearchBook_Click(object sender, EventArgs e) {
-            bookController.bookResults.ShowDialog();
+            bookController.bookSearch.ShowDialog();
         }
     }
 }

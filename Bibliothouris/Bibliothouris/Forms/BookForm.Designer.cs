@@ -82,9 +82,9 @@
             // 
             // btnSearchBook
             // 
-            this.btnSearchBook.Location = new System.Drawing.Point(125, 244);
+            this.btnSearchBook.Location = new System.Drawing.Point(125, 245);
             this.btnSearchBook.Name = "btnSearchBook";
-            this.btnSearchBook.Size = new System.Drawing.Size(75, 23);
+            this.btnSearchBook.Size = new System.Drawing.Size(127, 23);
             this.btnSearchBook.TabIndex = 2;
             this.btnSearchBook.Text = "Search book";
             this.btnSearchBook.UseVisualStyleBackColor = true;
