@@ -18,6 +18,7 @@ namespace Bibliothouris.Forms {
         void GetPartialTitle(Book book);
         void GetPartialFirstName(Book book);
         void GetPartialLastName(Book book);
+        void ClearAllBooks();
         DialogResult ShowDialog();
     }
 
@@ -40,6 +41,10 @@ namespace Bibliothouris.Forms {
             bookItem.SubItems.Add(book.authorLastName);
 
             return bookItem;
+        }
+
+        public void ClearAllBooks() {
+            SearchBookView.Items.Clear();
         }
 
         public void GetPartialISBN(Book book) {

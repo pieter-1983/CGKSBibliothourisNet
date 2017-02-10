@@ -10,10 +10,10 @@ namespace Bibliothouris.Source.Book
     {
         List<Book> GetAllBooks();
         void AddBook(string title, string isbn, string authorFirstName, string authorSecondName);
-        void GetPartialISBN(string partialISBN);
-        void GetPartialTitle(string partialTitle);
-        void GetPartialFirstName(string partialFirstName);
-        void GetPartialLastName(string partialLastName);
+        List<Book> GetPartialISBN(string partialISBN);
+        List<Book> GetPartialTitle(string partialTitle);
+        List<Book> GetPartialFirstName(string partialFirstName);
+        List<Book> GetPartialLastName(string partialLastName);
     }
 
 
@@ -41,20 +41,20 @@ namespace Bibliothouris.Source.Book
             bookRepository.AddBook(new Book(title, isbn, authorFirstName, authorSecondName));
         }
 
-        public void GetPartialISBN(string partialISBN) {
-            bookRepository.getPartialISBN(partialISBN);
+        public List<Book> GetPartialISBN(string partialISBN) {
+            return bookRepository.getPartialISBN(partialISBN);
         }
 
-        public void GetPartialTitle(string partialTitle) {
-            bookRepository.getPartialTitle(partialTitle);
+        public List<Book> GetPartialTitle(string partialTitle) {
+            return bookRepository.getPartialTitle(partialTitle);
         }
 
-        public void GetPartialFirstName(string partialFirstName) {
-            bookRepository.getPartialFirstName(partialFirstName);
+        public List<Book> GetPartialFirstName(string partialFirstName) {
+            return bookRepository.getPartialFirstName(partialFirstName);
         }
 
-        public void GetPartialLastName(string partialLastName) {
-            bookRepository.getPartialLastName(partialLastName);
+        public List<Book> GetPartialLastName(string partialLastName) {
+           return bookRepository.getPartialLastName(partialLastName);
         }
 
     }
