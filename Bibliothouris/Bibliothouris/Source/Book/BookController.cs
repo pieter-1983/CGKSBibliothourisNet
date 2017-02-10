@@ -6,15 +6,18 @@ using System.Text;
 using System.Threading.Tasks;
 using Bibliothouris.Forms;
 
-namespace Bibliothouris.Source.Book {
-    public class BookController {
+namespace Bibliothouris.Source.Book
+{
+    public class BookController
+    {
         internal IBookView view { get; }
         internal ISearchBook bookSearch { get; }
-        internal ISearchBookResults bookResults { get; }
+        private ISearchBookResults bookResults { get; }
         private IBookAddView addView { get; }
         private IBookService service;
 
-        public BookController(IBookView view, IBookAddView addView, IBookService service, ISearchBook bookSearch, ISearchBookResults bookResults) {
+        public BookController(IBookView view, IBookAddView addView, IBookService service, ISearchBook bookSearch, ISearchBookResults bookResults)
+        {
             this.service = service;
             this.view = view;
             this.addView = addView;
@@ -26,53 +29,46 @@ namespace Bibliothouris.Source.Book {
             this.bookResults.SetController(this);
         }
 
-        public void LoadAllBooks() {
-            foreach (Book book in service.GetAllBooks()) {
+        public void LoadAllBooks()
+        {
+            foreach(Book book in service.GetAllBooks()) {
                 view.AddBook(book);
-            }
+            }  
         }
 
-        public void AddBook(string title, string ISBN, string authorFirstName, string authorLastName) {
-            service.AddBook(title, ISBN, authorFirstName, authorLastName);
+        public void AddBook(string title, string ISBN, string authorFirstName, string authorLastName)
+        {
+            service.AddBook(title,ISBN,authorFirstName,authorLastName);
             addView.Close();
             ClearAllBooks();
             LoadAllBooks();
-        }
+        } 
 
         public void GetPartialISBN(string partialISBN) {
             service.GetPartialISBN(partialISBN);
             bookSearch.Close();
-            ClearAllBookResults();
-            LoadAllSearchedBooksISBN(partialISBN);
         }
-
         public void GetPartialTitle(string partialTitle) {
             service.GetPartialTitle(partialTitle);
             bookSearch.Close();
-            ClearAllBookResults();
-            LoadAllSearchedBooksTitle(partialTitle);
         }
-
         public void GetPartialFirstName(string partialFirstName) {
             service.GetPartialFirstName(partialFirstName);
             bookSearch.Close();
-            ClearAllBookResults();
-            LoadAllSearchedBooksFirstName(partialFirstName);
         }
-
         public void GetPartialLastName(string partialLastName) {
             service.GetPartialLastName(partialLastName);
             bookSearch.Close();
-            ClearAllBookResults();
-            LoadAllSearchedBooksLastName(partialLastName);
         }
 
 
-        public void ClearAllBooks() {
+        public void ClearAllBooks()
+        {
             view.ClearAllBooks();
         }
 
-        public void addBookView() {
+        public void addBookView()
+        {
             addView.Clear();
             addView.ShowDialog();
         }
@@ -83,32 +79,7 @@ namespace Bibliothouris.Source.Book {
         }
 
         public void ClearAllBookResults() {
-            bookResults.ClearAllBooks();
+            bookResults.
         }
-
-        public void LoadAllSearchedBooksISBN(string partialISBN) {
-            foreach (Book book in service.GetPartialISBN(partialISBN)) {
-                bookResults.GetPartialISBN(book);
-            }
-        }
-
-        public void LoadAllSearchedBooksTitle(string partialTitle) {
-            foreach (Book book in service.GetPartialTitle(partialTitle)) {
-                bookResults.GetPartialTitle(book);
-            }
-        }
-
-        public void LoadAllSearchedBooksFirstName(string partialFirstName) {
-            foreach (Book book in service.GetPartialFirstName(partialFirstName)) {
-                bookResults.GetPartialFirstName(book);
-            }
-        }
-
-        public void LoadAllSearchedBooksLastName(string partialLastName) {
-            foreach (Book book in service.GetPartialLastName(partialLastName)) {
-                bookResults.GetPartialLastName(book);
-            }
-        }
-
     }
 }

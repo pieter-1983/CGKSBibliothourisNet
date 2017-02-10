@@ -56,8 +56,7 @@ namespace Bibliothouris.Source.User
                 var memberArray = memberHelper.ReadFile("MemberRepo.txt");
                 foreach (var member in memberArray)
                 {
-                    AddMember(new Member(member.firstName, member.street, member.number, member.postalCode, member.city,
-                        member.INSS, member.lastName));
+                    AddMember(member);
                 }
 
             }
