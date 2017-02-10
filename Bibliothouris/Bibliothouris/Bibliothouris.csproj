@@ -74,17 +74,17 @@
     <Compile Include="Forms\MembersForm.Designer.cs">
       <DependentUpon>MembersForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SearchBookResults.cs">
+    <Compile Include="Forms\SearchBookResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SearchBookResults.Designer.cs">
-      <DependentUpon>SearchBookResults.cs</DependentUpon>
+    <Compile Include="Forms\SearchBookResultForm.Designer.cs">
+      <DependentUpon>SearchBookResultForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SearchBooks.cs">
+    <Compile Include="Forms\SearchBookForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\SearchBooks.Designer.cs">
-      <DependentUpon>SearchBooks.cs</DependentUpon>
+    <Compile Include="Forms\SearchBookForm.Designer.cs">
+      <DependentUpon>SearchBookForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\StartScreen.cs">
       <SubType>Form</SubType>
@@ -132,11 +132,11 @@
     <EmbeddedResource Include="Forms\MembersForm.resx">
       <DependentUpon>MembersForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SearchBookResults.resx">
-      <DependentUpon>SearchBookResults.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SearchBookResultForm.resx">
+      <DependentUpon>SearchBookResultForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SearchBooks.resx">
-      <DependentUpon>SearchBooks.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SearchBookForm.resx">
+      <DependentUpon>SearchBookForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StartScreen.resx">
       <DependentUpon>StartScreen.cs</DependentUpon>

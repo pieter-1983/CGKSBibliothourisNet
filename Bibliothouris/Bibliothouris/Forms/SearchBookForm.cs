@@ -21,11 +21,11 @@ namespace Bibliothouris.Forms {
 
 
 
-    public partial class SearchBooks : Form, ISearchBook {
+    public partial class SearchBookForm : Form, ISearchBook {
 
         private BookController bookcontroller;
 
-        public SearchBooks() {
+        public SearchBookForm() {
             InitializeComponent();
         }
 
@@ -34,10 +34,8 @@ namespace Bibliothouris.Forms {
         }
 
         public void Clear() {
-            ISBN.Text = "";
-            Title.Text = "";
-            AuthorFirstName.Text = "";
-            AuthorLastName.Text = "";
+            searchBookBox.Text = "";
+            
         }
 
         private void SearchBooks_Load(object sender, EventArgs e) {
@@ -45,6 +43,22 @@ namespace Bibliothouris.Forms {
         }
 
         private void btnSearch_Click(object sender, EventArgs e) {
+            if (comboBox1.SelectedIndex == 0) {
+                bookcontroller.GetPartialISBN(searchBookBox.Text);
+            }
+            else if(comboBox1.SelectedIndex == 1) {
+                bookcontroller.GetPartialTitle(searchBookBox.Text);
+            }
+            else if (comboBox1.SelectedIndex == 2) {
+                bookcontroller.GetPartialFirstName(searchBookBox.Text);
+            }
+            else if(comboBox1.SelectedIndex == 3) {
+                bookcontroller.GetPartialLastName(searchBookBox.Text);
+            }
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) {
 
         }
     }

@@ -1,5 +1,5 @@
 ﻿namespace Bibliothouris.Forms {
-    partial class SearchBookResults {
+    partial class SearchBookResultForm {
         /// <summary>
         /// Required designer variable.
         /// </summary>

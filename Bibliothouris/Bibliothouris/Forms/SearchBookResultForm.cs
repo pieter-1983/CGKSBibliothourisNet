@@ -21,11 +21,11 @@ namespace Bibliothouris.Forms {
         DialogResult ShowDialog();
     }
 
-    public partial class SearchBookResults : Form, ISearchBookResults {
+    public partial class SearchBookResultForm : Form, ISearchBookResults {
 
         private BookController bookcontroller;
 
-        public SearchBookResults() {
+        public SearchBookResultForm() {
             InitializeComponent();
         }
 
